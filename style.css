@@ -326,7 +326,7 @@ header {
   gap: 2rem;
   text-align: center;
   flex-direction: column;
-  transition: var(--ff-transition);
+  transition: all 5s ease;
 }
 .introduction img {
   width: 325px;
@@ -590,3 +590,61 @@ header {
 .relative {
   position: relative;
 }
+
+/* Animations and Animation Classes */
+header {
+  animation: topDown 2s ease both;
+  animation-delay: 800ms;
+}
+.skill-grid {
+  animation: DownTop 2s ease both;
+  animation-delay: 800ms;
+}
+.head-text {
+  animation: zoomInUp 2s ease both;
+}
+
+@keyframes topDown {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes DownTop {
+  0% {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomInUp{
+  0%{
+    animation-timing-function: cubic-bezier(.55,.055,.675,.19);
+    transform: scale3d(.1,.1,.1) translate3d(0,1000px,0);
+    opacity: 0;
+  }
+  60%{
+    animation-timing-function: cubic-bezier(.175,.885,.32,1);
+    transform: scale3d(.475,.475,.475) translate3d(0,-60px,0);
+    opacity: 1;
+  }
+}
+
+
+
+
