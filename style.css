@@ -592,15 +592,15 @@ header {
 }
 
 /* Animations and Animation Classes */
-header {
+header, .footer-nav {
   animation: topDown 2s ease both;
   animation-delay: 800ms;
 }
-.skill-grid {
+.skill-grid, .introduction, .cta {
   animation: DownTop 2s ease both;
   animation-delay: 800ms;
 }
-.head-text {
+.head-text, .carousel {
   animation: zoomInUp 2s ease both;
 }
 
